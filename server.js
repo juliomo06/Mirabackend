@@ -17,7 +17,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect('mongodb://localhost:27017/testlogin', {
+mongoose.connect('mongodb+srv://jrlim:pogiako_703@mira.ngwes.mongodb.net/?retryWrites=true&w=majority&appName=mira', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
