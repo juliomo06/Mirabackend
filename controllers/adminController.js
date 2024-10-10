@@ -23,6 +23,7 @@ const isAdmin = (req, res, next) => {
       name: decoded.id,
       email: decoded.email,
       role: decoded.role,
+      isVerified: true,
     };
 
     next();
@@ -67,7 +68,8 @@ const createModerator = async (req, res) => {
       name,
       email,
       password: hashedPassword, 
-      role: 'moderator'
+      role: 'moderator',
+      isVerified: true,
     });
 
     await newModerator.save();

@@ -129,6 +129,7 @@ app.post('/api/uploads', authenticate, (req, res) => {
 
 
 
+
 // Static folder for uploaded images
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use('/gcash', express.static(path.join(__dirname, 'gcash')));
